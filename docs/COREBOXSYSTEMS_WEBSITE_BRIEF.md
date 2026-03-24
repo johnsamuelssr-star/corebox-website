@@ -2,11 +2,54 @@
 
 ## Purpose
 
-This brief defines the first public website direction for Corebox Systems based on the current logo and the previously established domain split plan.
+This brief defines the first public website direction for Corebox Systems based on the approved logo and the live domain split.
 
-The site should live at `www.coreboxsystems.com` and act as the parent-company website.
+The site lives at `www.coreboxsystems.com` and acts as the parent-company website.
 
-Atlas should remain a product under the Corebox Systems brand and should live at `atlas.coreboxsystems.com`.
+Atlas remains a product under the Corebox Systems brand and lives at `atlas.coreboxsystems.com`.
+
+## Current Implementation Status
+
+The domain split is live.
+
+Current live structure:
+
+- `https://www.coreboxsystems.com` -> Corebox Systems website
+- `https://atlas.coreboxsystems.com` -> Atlas CRM
+- `https://coreboxsystems.com` -> redirect to `https://www.coreboxsystems.com`
+
+Current build and deployment setup:
+
+- website source repo: `https://github.com/johnsamuelssr-star/corebox-website`
+- website deploy path on server: `~/corebox-website`
+- website is served behind Caddy on `127.0.0.1:8081`
+- website is managed by `corebox-website.service`
+
+Current deployment workflow:
+
+```bash
+cd ~/corebox-website
+git pull
+npm install
+npm run build
+sudo systemctl restart corebox-website
+```
+
+This means the remaining work is now product design and website implementation, not routing or domain setup.
+
+## Approved Logo Asset
+
+The company logo is approved and should be treated as the primary brand anchor for the public website.
+
+Intended repo asset path:
+
+- `public/assets/corebox-systems-logo.png`
+
+Current asset note:
+
+- `public/assets/COREBOX_LOGO_ASSET_README.md`
+
+The logo image supplied in chat is the approved visual reference. If a clean exported source file is saved locally later, it should use the asset path above so implementation stays consistent.
 
 ## Brand Read from the Logo
 
@@ -27,6 +70,12 @@ The mark uses a structured cube-like form with strong white, navy, and electric 
 - connected infrastructure
 
 That makes it a strong fit for a company that builds operational software across multiple industries.
+
+Additional guidance from the approved logo treatment:
+
+- the cube mark should be treated as a hero-grade brand object, not a small decorative icon
+- the dark wordmark works best on darker or mid-tone backgrounds with enough contrast
+- subtle glow and light-falloff effects can be echoed in the website design, but the layout should not become visually soft or hazy
 
 ## Brand Positioning
 
@@ -52,6 +101,8 @@ The first version of the site should do four things clearly:
 2. introduce Atlas as the first live product
 3. signal that additional products are coming
 4. create a contact or demo path for conversations
+
+Operationally, version 1 should also be simple to update and deploy without affecting Atlas CRM.
 
 ## Audience
 
@@ -102,6 +153,13 @@ Suggested usage:
 - dark or steel-toned foundation
 - bright blue for emphasis and motion
 - white for sharp contrast and key surfaces
+
+Practical palette interpretation from the approved logo:
+
+- near-black navy for foundations
+- saturated cobalt/electric blue for product emphasis
+- cool gray for background structure
+- white for logo framing and major contrast moments
 
 ### Typography Direction
 
@@ -227,6 +285,19 @@ Recommended CTA options:
 - Request a demo
 - Contact Corebox Systems
 
+## Version 1 Scope Recommendation
+
+The first build should stay narrow and strong.
+
+Recommended version 1 scope:
+
+1. one polished homepage
+2. clear product section with Atlas as the live product
+3. simple contact CTA
+4. responsive design for desktop and mobile
+
+Version 1 should not try to ship a large marketing site immediately. It should ship a confident parent-brand homepage first.
+
 ## Sitemap
 
 Recommended first-release structure:
@@ -308,6 +379,13 @@ Recommended visual motifs:
 
 The logo should be treated as premium and dimensional. Avoid flattening the entire site into generic white cards on a blank background.
 
+Logo usage guidance:
+
+- use the full logo in the hero or header only when there is enough space to preserve legibility
+- use the cube mark by itself for smaller brand placements if a separate mark export becomes available
+- do not place the dark wordmark over low-contrast dark backgrounds without a lighter support treatment
+- avoid squeezing the logo into overly small nav spaces before a proper responsive lockup is prepared
+
 ## Launch Recommendation
 
 For version 1:
@@ -328,3 +406,20 @@ Once implementation begins, the next practical creative outputs should be:
 4. visual direction board based on the logo colors and geometry
 5. desktop and mobile homepage implementation
 
+## Immediate Build Priorities
+
+When website work resumes, the execution order should be:
+
+1. replace the current starter homepage with the Corebox hero and product narrative
+2. implement the portfolio section for Atlas and future products
+3. implement the Atlas spotlight and CTA section
+4. implement the contact section
+5. polish motion, layout, and responsive behavior
+6. integrate the approved logo into header and hero treatments using a consistent exported asset
+
+## Notes for Future Sessions
+
+- Atlas infrastructure has already been moved to `atlas.coreboxsystems.com`
+- the public site should remain company-first, not Atlas-first
+- avoid generic SaaS aesthetics; the logo supports a more architectural and premium direction
+- do not mix website routes with Atlas application routes

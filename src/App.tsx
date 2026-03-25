@@ -70,13 +70,22 @@ function App() {
       <div className="site-grid" aria-hidden="true" />
       <header className="site-header">
         <div className="container header-inner">
-          <a className="brand-lockup" href="#top" onClick={closeMenu}>
-            <span className="logo-plate logo-plate--header">
+          <a
+            className="brand-lockup"
+            href="#top"
+            onClick={closeMenu}
+            aria-label="CoreBox Systems"
+          >
+            <span className="brand-mark brand-mark--header" aria-hidden="true">
               <img
-                className="brand-lockup__logo"
+                className="brand-mark__image"
                 src="/assets/corebox-systems-logo.png"
-                alt="CoreBox Systems"
+                alt=""
               />
+            </span>
+            <span className="brand-wordmark">
+              <span className="brand-wordmark__name">CoreBox</span>
+              <span className="brand-wordmark__sub">Systems</span>
             </span>
           </a>
 
@@ -144,12 +153,18 @@ function App() {
             <div className="hero-visual" aria-label="CoreBox systems overview">
               <div className="hero-visual__panel hero-visual__panel--brand">
                 <div className="panel-kicker">Parent Company</div>
-                <div className="logo-plate logo-plate--hero">
-                  <img
-                    className="hero-logo"
-                    src="/assets/corebox-systems-logo.png"
-                    alt="CoreBox Systems logo"
-                  />
+                <div className="hero-brand" aria-label="CoreBox Systems">
+                  <span className="brand-mark brand-mark--hero" aria-hidden="true">
+                    <img
+                      className="brand-mark__image"
+                      src="/assets/corebox-systems-logo.png"
+                      alt=""
+                    />
+                  </span>
+                  <div className="hero-brand__text">
+                    <span>CoreBox</span>
+                    <small>Systems</small>
+                  </div>
                 </div>
                 <p>
                   Focused software for education operations, connected systems,
@@ -478,13 +493,19 @@ function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div className="footer-brand">
-            <span className="logo-plate logo-plate--footer">
-              <img
-                className="footer-logo"
-                src="/assets/corebox-systems-logo.png"
-                alt="CoreBox Systems"
-              />
-            </span>
+            <div className="footer-brand__lockup" aria-label="CoreBox Systems">
+              <span className="brand-mark brand-mark--footer" aria-hidden="true">
+                <img
+                  className="brand-mark__image"
+                  src="/assets/corebox-systems-logo.png"
+                  alt=""
+                />
+              </span>
+              <div className="footer-brand__text">
+                <span>CoreBox</span>
+                <small>Systems</small>
+              </div>
+            </div>
             <p>CoreBox Systems builds focused software for real-world operations.</p>
           </div>
 

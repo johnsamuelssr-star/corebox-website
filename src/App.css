@@ -48,94 +48,37 @@ main {
 .brand-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-}
-
-.brand-mark--header {
-  width: 56px;
-  height: 56px;
-}
-
-.brand-mark--hero {
-  width: 112px;
-  height: 112px;
-}
-
-.brand-mark--footer {
-  width: 72px;
-  height: 72px;
-}
-
-.brand-mark__image {
+.brand-logo {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 10%;
-  transform: scale(1.52);
-  transform-origin: center 18%;
-  filter: drop-shadow(0 10px 24px rgba(8, 24, 52, 0.34));
+  height: auto;
 }
 
-.brand-wordmark,
-.hero-brand__text,
-.footer-brand__text {
-  display: grid;
-  line-height: 0.92;
-}
-
-.brand-wordmark--nav {
-  gap: 2px;
-}
-
-.brand-wordmark__name,
-.hero-brand__text span,
-.footer-brand__text span {
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--color-text);
-}
-
-.brand-wordmark__sub,
-.hero-brand__text small,
-.footer-brand__text small {
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: var(--color-accent-soft);
+.brand-logo--header {
+  width: 218px;
 }
 
 .hero-brand {
   display: inline-flex;
   align-items: center;
-  gap: 18px;
   margin: 20px 0 24px;
 }
 
-.hero-brand__text span {
-  font-size: clamp(2.4rem, 3.6vw, 3.3rem);
-}
-
-.hero-brand__text small {
-  font-size: 0.98rem;
+.brand-logo--hero {
+  width: min(100%, 360px);
 }
 
 .footer-brand__lockup {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
   margin-bottom: 18px;
+}
+
+.brand-logo--footer {
+  width: min(100%, 240px);
 }
 
 .header-nav-wrap {
@@ -852,10 +795,6 @@ main {
     min-height: 76px;
   }
 
-  .brand-wordmark__name {
-    font-size: 1.3rem;
-  }
-
   .menu-toggle {
     display: inline-flex;
   }
@@ -930,17 +869,8 @@ main {
 }
 
 @media (max-width: 640px) {
-  .brand-wordmark__name {
-    font-size: 1.12rem;
-  }
-
-  .brand-wordmark__sub {
-    letter-spacing: 0.26em;
-  }
-
-  .brand-mark--header {
-    width: 48px;
-    height: 48px;
+  .brand-logo--header {
+    width: 172px;
   }
 
   .section,
@@ -976,8 +906,12 @@ main {
     align-items: center;
   }
 
-  .hero-brand__text span {
-    font-size: 2rem;
+  .brand-logo--hero {
+    width: min(100%, 280px);
+  }
+
+  .brand-logo--footer {
+    width: min(100%, 200px);
   }
 
   .atlas-window__topbar {

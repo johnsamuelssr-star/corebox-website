@@ -106,7 +106,7 @@ function App() {
                 Atlas Login
               </a>
               <a className="button button--primary" href="#contact" onClick={closeMenu}>
-                Request Demo
+                Contact Corebox
               </a>
             </div>
           </div>
@@ -127,7 +127,7 @@ function App() {
               </p>
               <div className="hero-actions">
                 <a className="button button--primary" href="#contact">
-                  Request Demo
+                  Contact Corebox
                 </a>
                 <a
                   className="button button--secondary"
@@ -365,8 +365,11 @@ function App() {
                     <p>{point.body}</p>
                   </article>
                 ))}
-                <a className="button button--primary" href="#contact">
-                  Request Atlas Demo
+                <a
+                  className="button button--primary"
+                  href="https://atlas.coreboxsystems.com"
+                >
+                  Explore Atlas
                 </a>
               </div>
             </div>
@@ -434,7 +437,7 @@ function App() {
             <div className="contact-panel">
               <div className="contact-lanes">
                 <div>
-                  <span>Atlas demos</span>
+                  <span>Atlas inquiries</span>
                   <strong>For tutoring and education teams</strong>
                 </div>
                 <div>
@@ -447,8 +450,11 @@ function App() {
                 </div>
               </div>
               <div className="contact-actions">
-                <a className="button button--primary" href="#top">
-                  Request Demo
+                <a
+                  className="button button--primary"
+                  href="https://atlas.coreboxsystems.com"
+                >
+                  Explore Atlas
                 </a>
                 <a className="button button--secondary" href="#contact">
                   Contact Corebox
@@ -488,7 +494,7 @@ function App() {
             </div>
             <div>
               <span>Access</span>
-              <a href="#contact">Request Demo</a>
+              <a href="https://atlas.coreboxsystems.com">Explore Atlas</a>
               <a href="#contact">Contact Corebox</a>
               <a href="https://atlas.coreboxsystems.com/login">Atlas Login</a>
             </div>

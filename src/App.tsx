@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 const navigation = [
@@ -63,6 +63,28 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const year = new Date().getFullYear()
 
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      '.reveal, .reveal--left, .reveal--right',
+    )
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.16 },
+    )
+
+    elements.forEach((element) => observer.observe(element))
+
+    return () => observer.disconnect()
+  }, [])
+
   const closeMenu = () => setMenuOpen(false)
 
   return (
@@ -122,15 +144,17 @@ function App() {
         <section className="hero-section" id="top">
           <div className="container hero-layout">
             <div className="hero-copy">
-              <p className="eyebrow">CoreBox Systems</p>
-              <h1>Software for systems that have to work.</h1>
-              <p className="hero-support">
+              <p className="eyebrow hero-reveal hero-reveal--1">CoreBox Systems</p>
+              <h1 className="hero-reveal hero-reveal--2">
+                Software for systems that have to work.
+              </h1>
+              <p className="hero-support hero-reveal hero-reveal--3">
                 CoreBox Systems builds focused software for operational
                 environments where clarity, control, and execution matter. Our
                 first live product, Atlas, helps education teams manage
                 scheduling, communication, and student workflows in one place.
               </p>
-              <div className="hero-actions">
+              <div className="hero-actions hero-reveal hero-reveal--4">
                 <a className="button button--primary" href="#contact">
                   Contact CoreBox
                 </a>
@@ -141,11 +165,13 @@ function App() {
                   Explore Atlas
                 </a>
               </div>
-              <p className="hero-proof">Live product: Atlas CRM</p>
+              <p className="hero-proof hero-reveal hero-reveal--5">
+                Live product: Atlas CRM
+              </p>
             </div>
 
             <div className="hero-visual" aria-label="CoreBox systems overview">
-              <div className="hero-visual__panel hero-visual__panel--brand">
+              <div className="hero-visual__panel hero-visual__panel--brand hero-reveal hero-reveal--6">
                 <div className="panel-kicker">Parent Company</div>
                 <div className="hero-brand" aria-label="CoreBox Systems">
                   <img
@@ -161,7 +187,7 @@ function App() {
               </div>
 
               <div className="hero-visual__stack">
-                <div className="hero-visual__panel hero-visual__panel--signal">
+                <div className="hero-visual__panel hero-visual__panel--signal hero-reveal hero-reveal--7 float-slow">
                   <div className="panel-kicker">Live now</div>
                   <div className="signal-head">
                     <strong>Atlas</strong>
@@ -183,7 +209,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="hero-visual__panel hero-visual__panel--notes">
+                <div className="hero-visual__panel hero-visual__panel--notes hero-reveal hero-reveal--8">
                   <div className="panel-kicker">Company Direction</div>
                   <ul>
                     {heroSignals.map((signal) => (
@@ -198,7 +224,7 @@ function App() {
 
         <section className="section" id="products">
           <div className="container">
-            <div className="section-heading">
+            <div className="section-heading reveal reveal--1">
               <p className="eyebrow">Products</p>
               <h2>Focused products. Structured systems.</h2>
               <p>
@@ -211,7 +237,7 @@ function App() {
             </div>
 
             <div className="products-grid">
-              <article className="feature-card feature-card--atlas">
+              <article className="feature-card feature-card--atlas reveal reveal--1 lift-card">
                 <div className="feature-card__tag">Live Product</div>
                 <h3>Atlas</h3>
                 <p>
@@ -231,7 +257,7 @@ function App() {
                 </a>
               </article>
 
-              <article className="feature-card feature-card--support">
+              <article className="feature-card feature-card--support reveal reveal--2 lift-card">
                 <div className="panel-kicker">Built around real workflows</div>
                 <h3>Operational systems with less friction.</h3>
                 <p>
@@ -252,7 +278,7 @@ function App() {
 
         <section className="section section--wide" id="atlas">
           <div className="container">
-            <div className="section-heading section-heading--tight">
+            <div className="section-heading section-heading--tight reveal reveal--1">
               <p className="eyebrow">Live Product</p>
               <h2>Atlas brings structure to education operations.</h2>
               <p>
@@ -263,7 +289,7 @@ function App() {
             </div>
 
             <div className="atlas-proof">
-              <div className="atlas-window">
+              <div className="atlas-window reveal--left">
                 <div className="atlas-window__topbar">
                   <span>Atlas workflow preview</span>
                   <span>Education operations</span>
@@ -281,19 +307,19 @@ function App() {
 
                   <div className="atlas-content">
                     <div className="atlas-metrics">
-                      <div className="atlas-metric">
+                      <div className="atlas-metric lift-card">
                         <span>Today&apos;s sessions</span>
                         <strong>18</strong>
                       </div>
-                      <div className="atlas-metric">
+                      <div className="atlas-metric lift-card">
                         <span>Open alerts</span>
                         <strong>3</strong>
                       </div>
-                      <div className="atlas-metric">
+                      <div className="atlas-metric lift-card">
                         <span>Student progress</span>
                         <strong>92%</strong>
                       </div>
-                      <div className="atlas-metric">
+                      <div className="atlas-metric lift-card">
                         <span>Revenue posted</span>
                         <strong>$4.8k</strong>
                       </div>
@@ -364,10 +390,13 @@ function App() {
                 </div>
               </div>
 
-              <div className="atlas-copy">
+              <div className="atlas-copy reveal--right">
                 <div className="atlas-badge">Atlas workflow preview</div>
-                {atlasProofPoints.map((point) => (
-                  <article key={point.title} className="proof-item">
+                {atlasProofPoints.map((point, index) => (
+                  <article
+                    key={point.title}
+                    className={`proof-item reveal reveal--${index + 1} lift-card`}
+                  >
                     <h3>{point.title}</h3>
                     <p>{point.body}</p>
                   </article>
@@ -385,7 +414,7 @@ function App() {
 
         <section className="section" id="approach">
           <div className="container">
-            <div className="section-heading section-heading--tight">
+            <div className="section-heading section-heading--tight reveal reveal--1">
               <p className="eyebrow">Approach</p>
               <h2>Built for operational clarity.</h2>
               <p>
@@ -396,8 +425,11 @@ function App() {
             </div>
 
             <div className="principles-grid">
-              {principles.map((principle) => (
-                <article key={principle.title} className="principle-card">
+              {principles.map((principle, index) => (
+                <article
+                  key={principle.title}
+                  className={`principle-card reveal reveal--${index + 1} lift-card`}
+                >
                   <h3>{principle.title}</h3>
                   <p>{principle.body}</p>
                 </article>
@@ -408,7 +440,7 @@ function App() {
 
         <section className="section section--muted">
           <div className="container">
-            <div className="section-heading section-heading--tight">
+            <div className="section-heading section-heading--tight reveal reveal--1">
               <p className="eyebrow">Expansion Areas</p>
               <h2>Where CoreBox is expanding.</h2>
               <p>
@@ -420,8 +452,11 @@ function App() {
             </div>
 
             <div className="expansion-grid">
-              {expansionAreas.map((area) => (
-                <article key={area.title} className="expansion-card">
+              {expansionAreas.map((area, index) => (
+                <article
+                  key={area.title}
+                  className={`expansion-card reveal reveal--${index + 1} lift-card`}
+                >
                   <h3>{area.title}</h3>
                   <p>{area.body}</p>
                 </article>
@@ -432,7 +467,7 @@ function App() {
 
         <section className="section contact-section" id="contact">
           <div className="container contact-shell">
-            <div className="contact-copy">
+            <div className="contact-copy reveal--left">
               <p className="eyebrow">Contact</p>
               <h2>Bring structure to the work that matters.</h2>
               <p>
@@ -441,17 +476,17 @@ function App() {
               </p>
             </div>
 
-            <div className="contact-panel">
+            <div className="contact-panel reveal--right">
               <div className="contact-lanes">
-                <div>
+                <div className="lift-card">
                   <span>Atlas inquiries</span>
                   <strong>For tutoring and education teams</strong>
                 </div>
-                <div>
+                <div className="lift-card">
                   <span>Partnerships</span>
                   <strong>For operators, collaborators, and referrals</strong>
                 </div>
-                <div>
+                <div className="lift-card">
                   <span>Future products</span>
                   <strong>For early conversations around expansion areas</strong>
                 </div>

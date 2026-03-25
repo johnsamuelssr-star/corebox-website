@@ -48,7 +48,41 @@ main {
 .brand-lockup {
   display: inline-flex;
   align-items: center;
+  gap: 12px;
   text-decoration: none;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.brand-mark--header {
+  width: 56px;
+  height: 56px;
+}
+
+.brand-mark--hero {
+  width: 112px;
+  height: 112px;
+}
+
+.brand-mark--footer {
+  width: 72px;
+  height: 72px;
+}
+
+.brand-mark__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  transform: scale(1.52);
+  transform-origin: center 18%;
+  filter: drop-shadow(0 10px 24px rgba(8, 24, 52, 0.34));
 }
 
 .brand-wordmark,
@@ -85,6 +119,7 @@ main {
 .hero-brand {
   display: inline-flex;
   align-items: center;
+  gap: 18px;
   margin: 20px 0 24px;
 }
 
@@ -99,6 +134,7 @@ main {
 .footer-brand__lockup {
   display: inline-flex;
   align-items: center;
+  gap: 16px;
   margin-bottom: 18px;
 }
 
@@ -900,6 +936,11 @@ main {
 
   .brand-wordmark__sub {
     letter-spacing: 0.26em;
+  }
+
+  .brand-mark--header {
+    width: 48px;
+    height: 48px;
   }
 
   .section,

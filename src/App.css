@@ -48,58 +48,7 @@ main {
 .brand-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
   text-decoration: none;
-}
-
-.brand-mark {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(18, 31, 51, 0.86), rgba(9, 17, 29, 0.9));
-  border: 1px solid rgba(118, 146, 190, 0.16);
-  box-shadow:
-    0 16px 36px -26px rgba(0, 0, 0, 0.82),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.brand-mark::after {
-  content: '';
-  position: absolute;
-  inset: auto 10% 8% 10%;
-  height: 22%;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(52, 115, 228, 0.32), transparent 72%);
-  filter: blur(10px);
-  pointer-events: none;
-}
-
-.brand-mark--header {
-  width: 62px;
-  height: 62px;
-}
-
-.brand-mark--hero {
-  width: 108px;
-  height: 108px;
-}
-
-.brand-mark--footer {
-  width: 74px;
-  height: 74px;
-}
-
-.brand-mark__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transform: scale(1.58);
-  transform-origin: top center;
 }
 
 .brand-wordmark,
@@ -107,6 +56,10 @@ main {
 .footer-brand__text {
   display: grid;
   line-height: 0.92;
+}
+
+.brand-wordmark--nav {
+  gap: 2px;
 }
 
 .brand-wordmark__name,
@@ -132,22 +85,20 @@ main {
 .hero-brand {
   display: inline-flex;
   align-items: center;
-  gap: 18px;
   margin: 20px 0 24px;
 }
 
 .hero-brand__text span {
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(2.4rem, 3.6vw, 3.3rem);
 }
 
 .hero-brand__text small {
-  font-size: 0.9rem;
+  font-size: 0.98rem;
 }
 
 .footer-brand__lockup {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
   margin-bottom: 18px;
 }
 
@@ -943,15 +894,6 @@ main {
 }
 
 @media (max-width: 640px) {
-  .brand-lockup {
-    gap: 10px;
-  }
-
-  .brand-mark--header {
-    width: 52px;
-    height: 52px;
-  }
-
   .brand-wordmark__name {
     font-size: 1.12rem;
   }
@@ -994,7 +936,7 @@ main {
   }
 
   .hero-brand__text span {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 
   .atlas-window__topbar {

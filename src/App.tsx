@@ -71,11 +71,13 @@ function App() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand-lockup" href="#top" onClick={closeMenu}>
-            <img
-              className="brand-lockup__logo"
-              src="/assets/corebox-systems-logo.png"
-              alt="Corebox Systems"
-            />
+            <span className="logo-plate logo-plate--header">
+              <img
+                className="brand-lockup__logo"
+                src="/assets/corebox-systems-logo.png"
+                alt="CoreBox Systems"
+              />
+            </span>
           </a>
 
           <button
@@ -106,7 +108,7 @@ function App() {
                 Atlas Login
               </a>
               <a className="button button--primary" href="#contact" onClick={closeMenu}>
-                Contact Corebox
+                Contact CoreBox
               </a>
             </div>
           </div>
@@ -117,17 +119,17 @@ function App() {
         <section className="hero-section" id="top">
           <div className="container hero-layout">
             <div className="hero-copy">
-              <p className="eyebrow">Corebox Systems</p>
+              <p className="eyebrow">CoreBox Systems</p>
               <h1>Software for systems that have to work.</h1>
               <p className="hero-support">
-                Corebox Systems builds focused software for operational
+                CoreBox Systems builds focused software for operational
                 environments where clarity, control, and execution matter. Our
                 first live product, Atlas, helps education teams manage
                 scheduling, communication, and student workflows in one place.
               </p>
               <div className="hero-actions">
                 <a className="button button--primary" href="#contact">
-                  Contact Corebox
+                  Contact CoreBox
                 </a>
                 <a
                   className="button button--secondary"
@@ -139,14 +141,16 @@ function App() {
               <p className="hero-proof">Live product: Atlas CRM</p>
             </div>
 
-            <div className="hero-visual" aria-label="Corebox systems overview">
+            <div className="hero-visual" aria-label="CoreBox systems overview">
               <div className="hero-visual__panel hero-visual__panel--brand">
                 <div className="panel-kicker">Parent Company</div>
-                <img
-                  className="hero-logo"
-                  src="/assets/corebox-systems-logo.png"
-                  alt="Corebox Systems logo"
-                />
+                <div className="logo-plate logo-plate--hero">
+                  <img
+                    className="hero-logo"
+                    src="/assets/corebox-systems-logo.png"
+                    alt="CoreBox Systems logo"
+                  />
+                </div>
                 <p>
                   Focused software for education operations, connected systems,
                   and guided service workflows.
@@ -195,7 +199,7 @@ function App() {
               <p className="eyebrow">Products</p>
               <h2>Focused products. Structured systems.</h2>
               <p>
-                Corebox Systems is built to develop practical software for
+                CoreBox Systems is built to develop practical software for
                 operations-heavy environments. Atlas is live today, and future
                 products will extend the same systems-first approach into
                 connected environments, guided workflows, and service-driven
@@ -382,7 +386,7 @@ function App() {
               <p className="eyebrow">Approach</p>
               <h2>Built for operational clarity.</h2>
               <p>
-                Corebox Systems creates software for environments where loose
+                CoreBox Systems creates software for environments where loose
                 process creates real friction. Our products are designed to make
                 the work easier to see, easier to manage, and easier to improve.
               </p>
@@ -403,9 +407,9 @@ function App() {
           <div className="container">
             <div className="section-heading section-heading--tight">
               <p className="eyebrow">Expansion Areas</p>
-              <h2>Where Corebox is expanding.</h2>
+              <h2>Where CoreBox is expanding.</h2>
               <p>
-                Atlas is the first live product. The broader Corebox roadmap
+                Atlas is the first live product. The broader CoreBox roadmap
                 extends the same practical design approach into additional
                 systems where guidance, coordination, and reliable execution
                 matter.
@@ -429,7 +433,7 @@ function App() {
               <p className="eyebrow">Contact</p>
               <h2>Bring structure to the work that matters.</h2>
               <p>
-                Whether you are evaluating Atlas or interested in what Corebox
+                Whether you are evaluating Atlas or interested in what CoreBox
                 Systems is building next, start the conversation here.
               </p>
             </div>
@@ -457,7 +461,7 @@ function App() {
                   Explore Atlas
                 </a>
                 <a className="button button--secondary" href="#contact">
-                  Contact Corebox
+                  Contact CoreBox
                 </a>
                 <a
                   className="button button--ghost"
@@ -474,12 +478,14 @@ function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div className="footer-brand">
-            <img
-              className="footer-logo"
-              src="/assets/corebox-systems-logo.png"
-              alt="Corebox Systems"
-            />
-            <p>Corebox Systems builds focused software for real-world operations.</p>
+            <span className="logo-plate logo-plate--footer">
+              <img
+                className="footer-logo"
+                src="/assets/corebox-systems-logo.png"
+                alt="CoreBox Systems"
+              />
+            </span>
+            <p>CoreBox Systems builds focused software for real-world operations.</p>
           </div>
 
           <div className="footer-links">
@@ -495,13 +501,13 @@ function App() {
             <div>
               <span>Access</span>
               <a href="https://atlas.coreboxsystems.com">Explore Atlas</a>
-              <a href="#contact">Contact Corebox</a>
+              <a href="#contact">Contact CoreBox</a>
               <a href="https://atlas.coreboxsystems.com/login">Atlas Login</a>
             </div>
           </div>
         </div>
         <div className="container footer-bottom">
-          <p>&copy; {year} Corebox Systems. All rights reserved.</p>
+          <p>&copy; {year} CoreBox Systems. All rights reserved.</p>
         </div>
       </footer>
     </div>

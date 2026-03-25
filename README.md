@@ -1,6 +1,6 @@
-# Corebox Website
+# CoreBox Website
 
-Public website repo for Corebox Systems.
+Public website repo for CoreBox Systems.
 
 This repo is intended to serve `www.coreboxsystems.com` while Atlas CRM remains in its own app repo and is served from `atlas.coreboxsystems.com`.
 
@@ -27,7 +27,7 @@ npm run build
 
 The first release of this website should:
 
-1. establish Corebox Systems as the parent company
+1. establish CoreBox Systems as the parent company
 2. introduce Atlas as the first live product
 3. make room for future products in education, home automation, and veteran benefits guidance
 4. provide a clear contact or demo path
@@ -41,4 +41,3 @@ The first release of this website should:
 - Public marketing site: `www.coreboxsystems.com`
 - Atlas CRM: `atlas.coreboxsystems.com`
 - Keep company marketing and Atlas application concerns separate
-

@@ -125,15 +125,8 @@ function App() {
               ))}
             </nav>
             <div className="header-actions">
-              <a
-                className="header-login"
-                href="https://atlas.coreboxsystems.com/login"
-                onClick={closeMenu}
-              >
-                Atlas Login
-              </a>
               <a className="button button--primary" href="#contact" onClick={closeMenu}>
-                Contact CoreBox
+                Request Demo
               </a>
             </div>
           </div>
@@ -156,7 +149,7 @@ function App() {
               </p>
               <div className="hero-actions hero-reveal hero-reveal--4">
                 <a className="button button--primary" href="#contact">
-                  Contact CoreBox
+                  Request Demo
                 </a>
                 <a
                   className="button button--secondary"
@@ -289,109 +282,22 @@ function App() {
             </div>
 
             <div className="atlas-proof">
-              <div className="atlas-window reveal--left">
-                <div className="atlas-window__topbar">
-                  <span>Atlas workflow preview</span>
-                  <span>Education operations</span>
+              <figure className="atlas-screenshot-panel reveal--left">
+                <div className="atlas-screenshot-panel__frame">
+                  <img
+                    className="atlas-screenshot"
+                    src="/assets/atlas-admin-tutors.png"
+                    alt="Atlas tutor management workspace showing live tutor records and admin actions."
+                  />
                 </div>
-
-                <div className="atlas-window__body">
-                  <aside className="atlas-sidebar">
-                    <div className="atlas-sidebar__brand">Atlas</div>
-                    <div className="atlas-sidebar__link is-active">Dashboard</div>
-                    <div className="atlas-sidebar__link">Students</div>
-                    <div className="atlas-sidebar__link">Sessions</div>
-                    <div className="atlas-sidebar__link">Billing</div>
-                    <div className="atlas-sidebar__link">Payroll</div>
-                  </aside>
-
-                  <div className="atlas-content">
-                    <div className="atlas-metrics">
-                      <div className="atlas-metric lift-card">
-                        <span>Today&apos;s sessions</span>
-                        <strong>18</strong>
-                      </div>
-                      <div className="atlas-metric lift-card">
-                        <span>Open alerts</span>
-                        <strong>3</strong>
-                      </div>
-                      <div className="atlas-metric lift-card">
-                        <span>Student progress</span>
-                        <strong>92%</strong>
-                      </div>
-                      <div className="atlas-metric lift-card">
-                        <span>Revenue posted</span>
-                        <strong>$4.8k</strong>
-                      </div>
-                    </div>
-
-                    <div className="atlas-panels">
-                      <div className="atlas-panel">
-                        <div className="atlas-panel__heading">
-                          <strong>Today&apos;s sessions</strong>
-                          <span>6 upcoming</span>
-                        </div>
-                        <div className="session-row">
-                          <div>
-                            <strong>9:00 AM</strong>
-                            <span>Algebra review</span>
-                          </div>
-                          <span>Scheduled</span>
-                        </div>
-                        <div className="session-row">
-                          <div>
-                            <strong>11:30 AM</strong>
-                            <span>Parent check-in</span>
-                          </div>
-                          <span>Confirmed</span>
-                        </div>
-                        <div className="session-row">
-                          <div>
-                            <strong>3:00 PM</strong>
-                            <span>Progress summary</span>
-                          </div>
-                          <span>Ready</span>
-                        </div>
-                      </div>
-
-                      <div className="atlas-panel atlas-panel--accent">
-                        <div className="atlas-panel__heading">
-                          <strong>Operational alerts</strong>
-                          <span>Needs review</span>
-                        </div>
-                        <div className="alert-row">
-                          <strong>Insufficient funds</strong>
-                          <span>2 sessions awaiting action</span>
-                        </div>
-                        <div className="alert-row">
-                          <strong>Deletion approval</strong>
-                          <span>1 request pending admin review</span>
-                        </div>
-                      </div>
-
-                      <div className="atlas-panel atlas-panel--wide">
-                        <div className="atlas-panel__heading">
-                          <strong>Learning workflow</strong>
-                          <span>Shared across teams</span>
-                        </div>
-                        <div className="progress-track">
-                          <span className="progress-step is-complete">
-                            Session notes
-                          </span>
-                          <span className="progress-step is-complete">
-                            Parent summary
-                          </span>
-                          <span className="progress-step">Homework follow-up</span>
-                          <span className="progress-step">Billing trace</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <figcaption className="atlas-screenshot-caption">
+                  <span>Actual Atlas product capture</span>
+                  <strong>Tutor management workspace</strong>
+                </figcaption>
+              </figure>
 
               <div className="atlas-copy reveal--right">
-                <div className="atlas-badge">Atlas workflow preview</div>
+                <div className="atlas-badge">Live product screenshot</div>
                 {atlasProofPoints.map((point, index) => (
                   <article
                     key={point.title}
@@ -494,18 +400,15 @@ function App() {
               <div className="contact-actions">
                 <a
                   className="button button--primary"
-                  href="https://atlas.coreboxsystems.com"
-                >
-                  Explore Atlas
-                </a>
-                <a className="button button--secondary" href="#contact">
-                  Contact CoreBox
-                </a>
-                <a
-                  className="button button--ghost"
                   href="https://atlas.coreboxsystems.com/login"
                 >
                   Atlas Login
+                </a>
+                <a
+                  className="button button--secondary"
+                  href="https://atlas.coreboxsystems.com"
+                >
+                  Explore Atlas
                 </a>
               </div>
             </div>

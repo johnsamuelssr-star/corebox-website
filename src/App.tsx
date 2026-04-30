@@ -4,6 +4,7 @@ import './App.css'
 const navigation = [
   { label: 'Products', href: '#products' },
   { label: 'Atlas', href: '#atlas' },
+  { label: 'Fort Knox Ledger', href: '#ledger' },
   { label: 'Approach', href: '#approach' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -29,12 +30,12 @@ const expansionAreas = [
     body: 'Additional tools for education organizations that need stronger coordination, communication, and operational visibility.',
   },
   {
-    title: 'Home Automation',
-    body: 'Software experiences for connected home environments that make control, status, and routines easier to manage.',
+    title: 'Owner Consoles',
+    body: 'Administrative tools that help product owners manage access, settings, usage, and operational visibility from one place.',
   },
   {
-    title: 'Veteran Guidance Tools',
-    body: 'Guided tools designed to help veterans navigate benefits workflows with more clarity, structure, and confidence.',
+    title: 'Guided Service Tools',
+    body: 'Structured tools for specialized workflows where users need clear steps, reliable records, and practical next actions.',
   },
 ]
 
@@ -53,10 +54,25 @@ const atlasProofPoints = [
   },
 ]
 
+const ledgerProofPoints = [
+  {
+    title: 'Private vault ledgers',
+    body: 'Track gold and silver entries inside user-owned ledgers with account-scoped records and controlled access.',
+  },
+  {
+    title: 'Metal valuation tools',
+    body: 'Use spot-price references, melt calculations, alerts, and reports to understand recorded holdings without investment advice claims.',
+  },
+  {
+    title: 'Server-ready foundation',
+    body: 'Built with authentication, owner settings, API usage visibility, email-ready alerts, and Docker deployment in mind.',
+  },
+]
+
 const heroSignals = [
   'Parent brand built for multiple product tracks',
-  'Atlas is live now for education operations',
-  'Expansion areas stay visible without competing with the live product',
+  'Atlas and Fort Knox Ledger are active product tracks',
+  'Expansion areas stay visible without competing with live products',
 ]
 
 function App() {
@@ -143,9 +159,9 @@ function App() {
               </h1>
               <p className="hero-support hero-reveal hero-reveal--3">
                 CoreBox Systems builds focused software for operational
-                environments where clarity, control, and execution matter. Our
-                first live product, Atlas, helps education teams manage
-                scheduling, communication, and student workflows in one place.
+                environments where clarity, control, and execution matter.
+                Atlas supports education operations, and Fort Knox Ledger brings
+                the same structured approach to private precious-metals records.
               </p>
               <div className="hero-actions hero-reveal hero-reveal--4">
                 <a className="button button--primary" href="#contact">
@@ -157,9 +173,15 @@ function App() {
                 >
                   Explore Atlas
                 </a>
+                <a
+                  className="button button--secondary"
+                  href="https://ledger.coreboxsystems.com"
+                >
+                  Open Fort Knox Ledger
+                </a>
               </div>
               <p className="hero-proof hero-reveal hero-reveal--5">
-                Live product: Atlas CRM
+                Live product tracks: Atlas CRM and Fort Knox Ledger
               </p>
             </div>
 
@@ -202,8 +224,17 @@ function App() {
                   </div>
                 </div>
 
-                <div className="hero-visual__panel hero-visual__panel--notes hero-reveal hero-reveal--8">
-                  <div className="panel-kicker">Company Direction</div>
+                <div className="hero-visual__panel hero-visual__panel--ledger hero-reveal hero-reveal--8">
+                  <div className="panel-kicker">New product track</div>
+                  <div className="ledger-mini">
+                    <div className="ledger-mini__dial" aria-hidden="true">
+                      <span />
+                    </div>
+                    <div>
+                      <strong>Fort Knox Ledger</strong>
+                      <span>Private precious-metals vault ledger</span>
+                    </div>
+                  </div>
                   <ul>
                     {heroSignals.map((signal) => (
                       <li key={signal}>{signal}</li>
@@ -222,9 +253,9 @@ function App() {
               <h2>Focused products. Structured systems.</h2>
               <p>
                 CoreBox Systems is built to develop practical software for
-                operations-heavy environments. Atlas is live today, and future
-                products will extend the same systems-first approach into
-                connected environments, guided workflows, and service-driven
+                operations-heavy environments. Atlas and Fort Knox Ledger are
+                active product tracks, and future products will extend the same
+                systems-first approach into guided workflows and service-driven
                 tools.
               </p>
             </div>
@@ -250,7 +281,28 @@ function App() {
                 </a>
               </article>
 
-              <article className="feature-card feature-card--support reveal reveal--2 lift-card">
+              <article className="feature-card feature-card--ledger reveal reveal--2 lift-card">
+                <div className="feature-card__tag">Beta Product</div>
+                <h3>Fort Knox Ledger</h3>
+                <p>
+                  A private precious-metals ledger for tracking gold and silver
+                  entries, melt-value calculations, price alerts, and vault
+                  summaries.
+                </p>
+                <div className="feature-card__rail">
+                  <span>Vault Ledgers</span>
+                  <span>Spot Prices</span>
+                  <span>Reports</span>
+                </div>
+                <a
+                  className="text-link"
+                  href="https://ledger.coreboxsystems.com"
+                >
+                  Open Fort Knox Ledger
+                </a>
+              </article>
+
+              <article className="feature-card feature-card--support reveal reveal--3 lift-card">
                 <div className="panel-kicker">Built around real workflows</div>
                 <h3>Operational systems with less friction.</h3>
                 <p>
@@ -318,6 +370,64 @@ function App() {
           </div>
         </section>
 
+        <section className="section section--wide" id="ledger">
+          <div className="container">
+            <div className="section-heading section-heading--tight reveal reveal--1">
+              <p className="eyebrow">Beta Product</p>
+              <h2>Fort Knox Ledger is built for private asset records.</h2>
+              <p>
+                Fort Knox Ledger is a browser-friendly precious-metals ledger
+                for personal vault records, valuation references, alerts, and
+                reports. It is designed for controlled beta testing under
+                ledger.coreboxsystems.com.
+              </p>
+            </div>
+
+            <div className="ledger-proof">
+              <div className="ledger-vault-panel reveal--left">
+                <div className="vault-door" aria-hidden="true">
+                  <div className="vault-door__ring" />
+                  <div className="vault-door__dial">
+                    <span />
+                  </div>
+                </div>
+                <div className="ledger-vault-panel__copy">
+                  <span>Product access</span>
+                  <strong>ledger.coreboxsystems.com</strong>
+                  <p>
+                    Beta-ready app experience with private account ledgers,
+                    spot-price tools, alert setup, and owner console controls.
+                  </p>
+                </div>
+              </div>
+
+              <div className="ledger-copy reveal--right">
+                {ledgerProofPoints.map((point, index) => (
+                  <article
+                    key={point.title}
+                    className={`proof-item reveal reveal--${index + 1} lift-card`}
+                  >
+                    <h3>{point.title}</h3>
+                    <p>{point.body}</p>
+                  </article>
+                ))}
+                <div className="ledger-disclaimer lift-card">
+                  Fort Knox Ledger provides inventory math, weight conversions,
+                  market reference data, and reporting tools. It is not
+                  investment, financial, tax, legal, appraisal, or trading
+                  advice.
+                </div>
+                <a
+                  className="button button--primary"
+                  href="https://ledger.coreboxsystems.com"
+                >
+                  Open Fort Knox Ledger
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="section" id="approach">
           <div className="container">
             <div className="section-heading section-heading--tight reveal reveal--1">
@@ -350,10 +460,10 @@ function App() {
               <p className="eyebrow">Expansion Areas</p>
               <h2>Where CoreBox is expanding.</h2>
               <p>
-                Atlas is the first live product. The broader CoreBox roadmap
-                extends the same practical design approach into additional
-                systems where guidance, coordination, and reliable execution
-                matter.
+                Atlas and Fort Knox Ledger are the first active product tracks.
+                The broader CoreBox roadmap extends the same practical design
+                approach into additional systems where guidance, coordination,
+                and reliable execution matter.
               </p>
             </div>
 
@@ -389,6 +499,10 @@ function App() {
                   <strong>For tutoring and education teams</strong>
                 </div>
                 <div className="lift-card">
+                  <span>Fort Knox Ledger</span>
+                  <strong>For private precious-metals ledger beta access</strong>
+                </div>
+                <div className="lift-card">
                   <span>Partnerships</span>
                   <strong>For operators, collaborators, and referrals</strong>
                 </div>
@@ -406,9 +520,9 @@ function App() {
                 </a>
                 <a
                   className="button button--secondary"
-                  href="https://atlas.coreboxsystems.com"
+                  href="https://ledger.coreboxsystems.com"
                 >
-                  Explore Atlas
+                  Open Fort Knox Ledger
                 </a>
               </div>
             </div>
@@ -433,6 +547,7 @@ function App() {
             <div>
               <span>Products</span>
               <a href="https://atlas.coreboxsystems.com">Atlas</a>
+              <a href="https://ledger.coreboxsystems.com">Fort Knox Ledger</a>
             </div>
             <div>
               <span>Company</span>
@@ -442,6 +557,7 @@ function App() {
             <div>
               <span>Access</span>
               <a href="https://atlas.coreboxsystems.com">Explore Atlas</a>
+              <a href="https://ledger.coreboxsystems.com">Open Fort Knox Ledger</a>
               <a href="#contact">Contact CoreBox</a>
               <a href="https://atlas.coreboxsystems.com/login">Atlas Login</a>
             </div>
